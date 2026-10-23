@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CopilotDiffPersistence">
+    <option name="pendingDiffs">
+      <map>
+        <entry key="$PROJECT_DIR$/database_setup.sql">
+          <value>
+            <PendingDiffInfo>
+              <option name="filePath" value="$PROJECT_DIR$/database_setup.sql" />
+              <option name="updatedContent" value="-- Create and setup database for Product Management System&#10;-- Drop existing database if exists&#10;DROP DATABASE IF EXISTS product;&#10;&#10;-- Create new database&#10;CREATE DATABASE product;&#10;&#10;-- Use the database&#10;USE product;&#10;&#10;-- Create category table first (referenced by products)&#10;CREATE TABLE category (&#10;    id INT AUTO_INCREMENT PRIMARY KEY,&#10;    name VARCHAR(100) NOT NULL UNIQUE&#10;);&#10;&#10;-- Create products table&#10;CREATE TABLE products (&#10;    id INT PRIMARY KEY,&#10;    productName VARCHAR(100),&#10;    unitPrice FLOAT,&#10;    quantity INT,&#10;    description VARCHAR(200),&#10;    categoryId INT,&#10;    FOREIGN KEY (categoryId) REFERENCES category(id)&#10;);&#10;&#10;-- Insert sample categories&#10;INSERT INTO category(name) VALUES &#10;('Mặt hàng điện tử'),&#10;('Mặt hàng hóa chất'),&#10;('Mặt hàng gia dụng'),&#10;('Mặt hàng thực phẩm');&#10;&#10;-- Verify data&#10;SELECT * FROM category;&#10;SELECT * FROM products;&#10;" />
+            </PendingDiffInfo>
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+</project>

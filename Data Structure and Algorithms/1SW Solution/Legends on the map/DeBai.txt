@@ -1,0 +1,19 @@
+all of the doors at the company are identical and he can open them with one key.
+building with R in length and C in width. can move up down left and right.
+when the time required for minsu to move from one place to another is 1. find out the minimum time needed for him to go and exit
+X: wall
+_: can move
+O: exit
+A: door
+a: key
+the second line contains r (the vertical coordinate of Min-su's location) and c ( horizontal width)
+example:
+1
+6 6
+2 4
+XXXXXX
+X____X
+X_X_aX
+XAXXXX
+X___OX
+XXXXXX

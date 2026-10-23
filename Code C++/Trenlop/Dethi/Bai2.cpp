@@ -3,8 +3,8 @@ Câu 2: Viết chương trình thực hiện các yêu cầu sau:
 Khai báo lớp đa thức với các thuộc tính: bậc đa thức, các hệ số tương ứng.
 Xây dựng các phương thức: nhập, xuất một đối tượng đa thức.
 Định nghĩa toán tử +, - hai đa thức. Thực hiện cộng, trừ hai đa thức và in kết quả ra màn hình.
-//dathuc 1: 1x^0+3x^1+4x^2
-//dathuc2: 2x^0+5x^1+5x^2+5x^3+6x^4
+// 1x^0+3x^1+4x^2
+// 2x^0+5x^1+5x^2+5x^3+6x^4
 */
 #include <iostream>
 using namespace std;
@@ -55,7 +55,6 @@ class DaThuc{
             return os;
         }
 
-
         DaThuc operator + ( DaThuc x){
             DaThuc sum;
             sum.bacDt = max(bacDt , x.bacDt);
@@ -74,7 +73,6 @@ class DaThuc{
             return minus;   
         }
 
-
 };
 int main(){
     DaThuc dt1, dt2;
@@ -84,11 +82,11 @@ int main(){
     cin >> dt1;
     cout << "Nhap da thuc thu hai:";
     cin >> dt2;
-
+    DaThuc sum = dt1 + dt2;
     cout << "Da thuc thu nhat: " << dt1 << endl;
     cout << "Da thuc thu hai: " << dt2 << endl;
 
-    DaThuc sum = dt1 + dt2;
+    
     cout << "Tong hai da thuc: " << sum << endl;
 
     DaThuc minus = dt1 - dt2;

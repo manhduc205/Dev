@@ -1,4 +1,6 @@
-#include <bits/stdc++.h>
+#include <iostream>
+#include <algorithm>
+
 using namespace std;
 
 int partition(int a[], int l, int r){ // phân hoạch lomuto
@@ -7,18 +9,19 @@ int partition(int a[], int l, int r){ // phân hoạch lomuto
     for(int j = l; j < r; j++){
         if(a[j] <= pilot){
             ++i;
-            swap(a[i], a[j]);
+            swap(a[i], a[j]);   
         }
     }
+    
     // Đưa con trỏ về giữa
     ++i;
     swap(a[i], a[r]);
     return i;
 }
 
-int partition2(int a[], int l, int r){
+int partition2(int a[], int l, int r){ // phân hoạch hoare
     int pivot = a[l];
-    int i = l - 1; j = r + 1;
+    int i = l - 1, j = r + 1;
     while(1){
         do{
             ++i;
@@ -40,7 +43,7 @@ void quickSort(int a[], int l, int r){
 }
 int main(){
     int n; cin >> n;
-    int a[n];
+    int a[50];
     for(int i = 0; i < n; i++){
         cin >> a[i];
     }

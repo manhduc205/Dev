@@ -1,1 +1,14 @@
-Nguyễn Mạnh Đức 19 tuổi 26/03/2005
+Ma cb: CB001
+Ma dv: DV01
+ho ten: Nguyen Van A
+Nam sinh: 1985
+phu cap: 500000
+he so luong : 4.5
+bao hiem: 100000
+Ma cb: CB002
+Ma dv: DV02
+ho ten: Tran Thi B
+Nam sinh: 1990
+phu cap: 400000
+he so luong : 3.8
+bao hiem: 90000

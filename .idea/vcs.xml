@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="VcsDirectoryMappings">
+    <mapping directory="" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/AI_Python/MiAI_FaceRecog_3" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/AI_Python/insightface" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/Github/test" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/JavaBackend/Java_Projects/Project2" vcs="Git" />
+  </component>
+</project>

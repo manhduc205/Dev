@@ -27,7 +27,7 @@ int main() {
             cin >> u >> v;
             cha[v] = u;
         }
-        cout << "#" << t << ":";
+        cout << "#" << t ;
         for (int i = 0; i < Q; i++) {
             int x;
             cin >> x;
@@ -38,3 +38,25 @@ int main() {
 
     return 0;
 }
+/*
+Input mẫu
+2
+5 3
+1 2
+1 3
+2 4
+2 5
+1
+4
+3
+4 2
+1 2
+2 3
+3 4
+4
+2
+Output mẫu
+#1 0 2 1
+#2 3 1
+
+*/

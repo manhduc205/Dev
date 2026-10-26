@@ -1,0 +1,7 @@
+you are given a grid of size N x M and each cell of the grid is filled with a number 
+
+in the grid you want to color some of the cells by following the condition below
+
+Condition by either adding or subtracting all of the numbers that are placed at the top, at the bottom, to the right and to the left of a given number, you can get the given number
+
+see the grid below

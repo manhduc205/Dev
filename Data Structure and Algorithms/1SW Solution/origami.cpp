@@ -19,7 +19,7 @@ int main(){
         }
 
         int rong = N/M;
-        int maxSum = -1e9;
+        int maxSum = 0;
         for(int i = 0; i < N; i++){
             for(int j = 0; j < rong; j++){
                 int sum = 0;
@@ -39,12 +39,11 @@ int main(){
                 
             }
         }
-        cout << "#" << t << ": ";
+        cout << "#" << t << " ";
         cout << maxSum << "\n";
     }
     return 0;
 }
-
 /*
 2
 6 3
@@ -63,5 +62,8 @@ int main(){
 5 5 4 7 6 2 8 4
 4 9 8 7 1 8 6 5
 1 2 4 8 7 9 5 3
-output: 16
+
+#1 16
+#2 31
+
 */

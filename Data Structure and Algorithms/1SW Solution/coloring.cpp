@@ -51,43 +51,77 @@ bool check(int i, int j){
 int main(){
     ios::sync_with_stdio(false);
     cin.tie(nullptr);
-    
-    cin >> N >> M;
-    a.assign(N, vector<int>(M));
-    for(int i = 0; i < N; i++){
-        for(int j =0; j < M; j++){
-            cin >> a[i][j];
-        }
-    }
-
-    int dem = 0;
-    for(int i = 0; i < N; i++){
-        for(int j =0; j < M; j++){
-            if(check(i,j) == true){
-                dem++;
+    int T; cin >> T;
+    for(int t = 1; t<= T; t++){
+        cin >> N >> M;
+        a.assign(N, vector<int>(M));
+        for(int i = 0; i < N; i++){
+            for(int j =0; j < M; j++){
+                cin >> a[i][j];
             }
         }
+
+        int dem = 0;
+        for(int i = 0; i < N; i++){
+            for(int j =0; j < M; j++){
+                if(check(i,j) == true){
+                    dem++;
+                }
+            }
+        }
+        cout << "#" << t << " ";
+        cout << dem << "\n";
     }
-    cout << dem;
+    
     return 0;
 
 }
-
 /*
+(Input)
+5
 5 6
 3 4 0 -1 9 -2
 -1 1 3 8 10 13
 5 5 2 0 6 -4
 -5 7 4 -1 8 -9
 3 -7 -3 5 -3 12
+9 5
+-6 5 9 6 2
+-7 -2 -5 0 7
+2 6 10 -1 -1
+6 -8 1 2 2
+-6 -4 8 -10 8
+9 -6 3 10 1
+10 0 3 -2 5
+-6 4 4 3 2
+-6 10 8 -8 -5
+7 12
+-1 -4 3 1 -4 -6 4 -10 5 -8 -2 -3
+5 1 10 -8 4 0 6 4 4 -5 -5 -10
+-7 4 -7 9 10 -3 -10 -8 3 0 -5 1
+-4 -8 -5 -6 -10 8 2 -1 -7 0 -9 -3
+3 8 -5 5 -7 -5 8 -6 2 9 -3 4
+10 -4 -6 2 8 -8 -9 6 6 -4 -10 9
+0 -2 1 9 -8 -7 5 10 -6 -1 -8 -3
+6 8
+9 -7 0 0 9 4 2 -3
+-6 0 -2 3 -1 -6 7 -5
+-9 0 -4 6 3 -4 -2 -8
+3 -8 5 -9 0 -1 9 8
+-8 -10 -2 -6 1 -8 8 1
+-4 -8 -1 7 -2 -7 6 10
+5 9
+-10 -10 -2 -3 10 9 -9 -8 0
+9 -8 9 7 8 -3 -10 5 5
+9 8 -5 10 -5 -7 -1 1 10
+3 -4 -3 -3 -7 9 10 -5 2
+9 10 -1 -9 7 5 3 -4 -2
 
-output : 18
+(Output)
+#1 18
+#2 9
+#3 22
+#4 15
+#5 19
 
-you are given a grid of size N x M and each cell of the grid is filled with a number 
-
-in the grid you want to color some of the cells by following the condition below
-
-Condition by either adding or subtracting all of the numbers that are placed at the top, at the bottom, to the right and to the left of a given number, you can get the given number
-
-see the grid below
 */

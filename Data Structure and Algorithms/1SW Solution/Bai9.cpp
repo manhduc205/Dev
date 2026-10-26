@@ -24,15 +24,32 @@ int main() {
         cin >> N;
 
         vector<int> demCon(N + 1, 0);
-        for (int i = 0; i < N - 1; i++) {
+        for (int i = 0; i < N -1; i++) {
             int u, v;
             cin >> u >> v;
             demCon[u]++;
         }
 
-        cout << "#" << t << ": ";
+        cout << "#" << t << " ";
         cout << demNutLa(N, demCon) << '\n';
     }
 
     return 0;
 }
+/*
+Input mẫu
+3
+5
+1 2
+1 3
+2 4
+2 5
+3
+1 2
+2 3
+1
+Output mẫu
+#1 3
+#2 1
+#3 1
+*/

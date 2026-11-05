@@ -28,7 +28,7 @@ void Dijkstra(int s){
         // chọn ra đường đi ngắn nhất 
         pair<int, int> top = Q.top(); Q.pop();
         int u = top.second, kc = top.first;
-        if(kc > d[u]) continue; // đã có đường đi tối ưu hơn
+        if(kc > d[u]) continue; // đã có đường đi tối ưu hơn 
         // relax
         for(auto it : ke[u]){
             int v = it.first, w = it.second;

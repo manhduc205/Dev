@@ -28,7 +28,7 @@ void bfs(int sr, int sc){
             if(a[u][v] > h){
                 peak = 0;
             }
-            if(a[u][v] <h){
+            if(a[u][v] < h){
                 continue;
             }
             if(a[u][v] == h&& visited[u][v]){

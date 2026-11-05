@@ -129,9 +129,7 @@ string getPath(int x, int y) {
         x = px;
         y = py;
     }
-
     reverse(path.begin(), path.end());
-
     return path;
 }
 

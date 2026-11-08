@@ -20,7 +20,7 @@ int moveY[] = {0, 0, -1, 1};
 char direction[] = {'U', 'D', 'L', 'R'};
 
 int startX, startY;
-
+int exitX, exitY;
 int traceX[MAXN][MAXN];
 int traceY[MAXN][MAXN];
 char traceDir[MAXN][MAXN];
@@ -67,7 +67,7 @@ void bfsMonster() {
 // BFS tìm đường cho A
 bool bfsPlayer() {
     queue<pair<int, int>> q;
-
+    
     q.push({startX, startY});
     playerTime[startX][startY] = 0;
 
@@ -80,6 +80,8 @@ bool bfsPlayer() {
 
         // Đã đến ô biên
         if (x == 1 || x == N || y == 1 || y == M) {
+            exitX = x;
+            exitY = y;
             return true;
         }
 
@@ -156,32 +158,7 @@ int main() {
     bfsMonster();
 
     if (bfsPlayer()) {
-        string path = "";
-
-        // Tìm ô biên mà A đã đến
-        for (int i = 1; i <= N; i++) {
-            if (playerTime[i][1] != -1) {
-                path = getPath(i, 1);
-                break;
-            }
-
-            if (playerTime[i][M] != -1) {
-                path = getPath(i, M);
-                break;
-            }
-        }
-
-        for (int j = 1; j <= M; j++) {
-            if (playerTime[1][j] != -1) {
-                path = getPath(1, j);
-                break;
-            }
-
-            if (playerTime[N][j] != -1) {
-                path = getPath(N, j);
-                break;
-            }
-        }
+        string path = getPath(exitX, exitY);
 
         cout << "YES\n";
         cout << path.length() << "\n";

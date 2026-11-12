@@ -114,8 +114,7 @@ int main() {
                         int u = i + moveX[k];
                         int v = j + moveY[k];
 
-                        if (u >= 1 && u <= N &&
-                            v >= 1 && v <= M) {
+                        if (u >= 1 && u <= N && v >= 1 && v <= M) {
                             danger[u][v][0] = true;
                         }
                     }
